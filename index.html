@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Transición con css */
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css10_transiciones.css">
+</head>
+<html>
+    <body>
+        <main>
+            <!--Animación con utilidad animate.css automática -->
+            <transition appear name="animate.css"
+                enter-active-class="animated bounceInUp"
+                leave-active-class="animated hinge">
+                    <h1  class="titulo" v-text="titulo"></h1>
+            </transition>
+            Tabla que desea ver:
+            <input type="number" min="2" v-model="tabla">
+            Hasta el número:
+            <input type="number" min="2" v-model="limite">
+            <p v-for="i in limite*1">
+              {{tabla}} * {{i}} = {{tabla * i}}
+            </p>
+
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="main10_transiciones.js"></script>
+    </body>
+</html>
